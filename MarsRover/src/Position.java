@@ -1,8 +1,17 @@
 
+/*
+ * This class holds the information regarding to the Position of the Rover and its methods to update and access 
+ * to the variables. Implements the Position Interface Class that holds methods for the direction of the Rover.
+ * 
+ * In this class methods for moving the rover around the the grid can be found 
+ * 		(increment and decrement the x,y positions)
+ */
+
+
 public class Position implements PositionIF{
 
-	private int x = 0;
-	private int y = 0;
+	private int x;
+	private int y;
 	private Direction direction = null;
 	  
 	public Position(int x, int y, Direction n) {
@@ -27,14 +36,28 @@ public class Position implements PositionIF{
 		direction = direction.left();
 	}
 	 
-	public int increment(int a) {
-		a++;
-		return a;
+	protected void incrementX() {
+		x = this.x;
+		x++;
+		this.x = x;
 	}
 	
-	public int decrement(int a) {
-		a--;
-		return a;
+	protected void incrementY() {
+		y = this.y;
+		y++;
+		this.y = y;
+	}
+	
+	protected void decrementX() {
+		x = this.x;
+		x--;
+		this.x = x;
+	}
+	
+	protected void decrementY() {
+		y = this.y;
+		y--;
+		this.y = y;
 	}
 	
 	public int getX() {
@@ -43,6 +66,15 @@ public class Position implements PositionIF{
 
 	public int getY() {
 		return y;
+	}
+	
+	protected void setX(int x) {
+		this.x = x;
+		
+	}
+	
+	protected void setY(int y) {
+		this.y = y;
 	}
 	
 
