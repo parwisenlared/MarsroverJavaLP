@@ -4,7 +4,10 @@
  *  This class contains methods to define the GRID the rover will be running on.
  *  When loading the input (ideally via an the imput text - not done yet)
  *  	the first line defines the x,y limits of the plateau
+ *  
+ *  contructor
  */
+
 public class Plateau {
 
 	private int width;

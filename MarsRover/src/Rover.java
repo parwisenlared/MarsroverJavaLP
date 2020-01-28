@@ -16,7 +16,6 @@ public class Rover{
 	 */
 	
 
-	 
 	public Rover(Plateau plateau, Position position) {
 		  this.position = position;
 		  this.plateau = plateau;
