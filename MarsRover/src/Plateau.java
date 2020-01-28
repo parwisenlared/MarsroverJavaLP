@@ -7,28 +7,28 @@
  */
 public class Plateau {
 
-	private int x;
-	private int y;
+	private int width;
+	private int height;
 	
 	public Plateau (int topRight, int bottomRight) {
-		topRight = x;
-		bottomRight = y;
+		this.width = topRight;
+		this.height = bottomRight;
 	}
 
 	public int getX() {
-		return x;
+		return width;
 	}
 
 	public void setX(int x) {
-		this.x = x;
+		this.width = x;
 	}
 
 	public int getY() {
-		return y;
+		return height;
 	}
 
 	public void setY(int y) {
-		this.y = y;
+		this.height = y;
 	}
 	
 	

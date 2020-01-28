@@ -3,8 +3,8 @@ public class Rover{
 	
 	//TODO: Need to be able to import the input as a text file
 	
-	private static Position position = null;
-	private static Plateau plateau = null;
+	private static Position position;
+	private static Plateau plateau;
 	
 	
 	/**
@@ -14,9 +14,7 @@ public class Rover{
 	 * M: Move forward
 	 *
 	 */
-	public enum Command {
-	  R, L, M;
-	}
+	
 
 	 
 	public Rover(Plateau plateau, Position position) {
@@ -51,38 +49,39 @@ public class Rover{
 	}
 	
 	
-	// Apparently the if clause with the (position != plateau does not work, but still Prints and increments :o
+	
 	
 	// Idea: create method out of bounds and try to include it in this:
 	
 	private void move() {
+		
 		switch (position.getDirection()) {
 		
 		case N:
 			if (position.getY() != plateau.getY()) {
-				System.out.println("HEY");
-				position.incrementY();	
-			}
-			else {
-				;}
+				position.incrementY();
+				}
 			break;
 			
 		case E:
-	      	if (plateau.getX() != position.getX()) {
-	      		System.out.println("Hola");
-	      		position.incrementX();
-	      		}
-	      	else {;}
+			if (position.getX() != plateau.getX()) {
+				position.incrementX();
+				}
 		    break;
 		   
 		 case S:
-		     position.decrementY();
+			 if (position.getY() != plateau.getY()) {
+				position.decrementY();
+			}
 	      	break;
 		       
 		 case W:
-			 position.decrementX();
+			 if (position.getX() != plateau.getX()) {
+				position.decrementX();
+			}
 	      	break;
 		}
+		
 	
 	}
 	
