@@ -47,7 +47,6 @@ public class Rover{
 	
 	
 	
-	
 	/*
 	 *  Call this method to make the rover move. 
 	 *  An initial position and plateau are needed for the rover to move.

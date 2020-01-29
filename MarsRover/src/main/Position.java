@@ -28,6 +28,12 @@ public class Position implements PositionIF{
 		return x + " " + y;
 	}
 	
+	protected void setPosition(int x,int y, Direction direction) {
+		this.x = x;
+		this.y = y;
+		this.direction = direction;
+	}
+	
 
 	protected void setDirectionRight() {
 		direction = direction.right();
@@ -38,19 +44,19 @@ public class Position implements PositionIF{
 		direction = direction.left();
 	}
 	 
-	protected void incrementX() {
+	public void incrementX() {
 		x = this.x;
 		x++;
 		this.x = x;
 	}
 	
-	protected void incrementY() {
+	public void incrementY() {
 		y = this.y;
 		y++;
 		this.y = y;
 	}
 	
-	protected void decrementX() {
+	public void decrementX() {
 		x = this.x;
 		x--;
 		this.x = x;
@@ -70,12 +76,12 @@ public class Position implements PositionIF{
 		return y;
 	}
 	
-	protected void setX(int x) {
+	public void setX(int x) {
 		this.x = x;
 		
 	}
 	
-	protected void setY(int y) {
+	public void setY(int y) {
 		this.y = y;
 	}
 	
