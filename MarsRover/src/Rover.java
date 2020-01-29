@@ -25,26 +25,12 @@ public class Rover{
 		return Rover.position;
 	}
 	
-	
-	public void process(String commands) {
-		for (int idx = 0; idx < commands.length(); idx++) {
-			process(commands.charAt(idx));
-		}
+	public Plateau getPlateau() {
+		return Rover.plateau;
 	}
 	
-	// Process the input and do the correspondent actions
-	
-	private void process(Character command) {
-		if (command.equals('L')) {
-			position.setDirectionLeft();
-		} else if (command.equals('R')) {
-			position.setDirectionRight();
-		} else if (command.equals('M')) {
-			move();
-		} else {
-			throw new IllegalArgumentException(
-					"Command not valid");
-		}
+	public Position getDirection() {
+		return position;
 	}
 	
 	
@@ -52,7 +38,7 @@ public class Rover{
 	
 	// Idea: create method out of bounds and try to include it in this:
 	
-	private void move() {
+	public void move() {
 		
 		switch (position.getDirection()) {
 		
@@ -69,14 +55,14 @@ public class Rover{
 		    break;
 		   
 		 case S:
-			 if (position.getY() != plateau.getY()) {
+			 if (position.getY() != 0) {
 				position.decrementY();
 			}
 	      	break;
 		       
 		 case W:
-			 if (position.getX() != plateau.getX()) {
-				position.decrementX();
+			 if (position.getX() != 0) {
+				position.decrementX();	
 			}
 	      	break;
 		}

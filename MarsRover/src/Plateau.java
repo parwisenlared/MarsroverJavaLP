@@ -34,6 +34,10 @@ public class Plateau {
 		this.height = y;
 	}
 	
+	public String toString() {
+		 return getX() + " " + getY();
+	}
+	
 	
 	// IDEA for JUnit Test: no negative numbers allowed.
 	
