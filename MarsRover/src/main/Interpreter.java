@@ -1,3 +1,4 @@
+package main;
 /**
  * 
  *  The interpreter holds the information to read the input from a file and process it.
@@ -9,7 +10,7 @@
  * 
  */
 
-package main;
+
 
 
 import java.io.File;
