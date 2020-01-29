@@ -1,7 +1,17 @@
+/**
+ * 
+ * 	This class holds the information about the Rover and methods to move and change position once the instructions
+ * 		have been triggered. 
+ * 
+ * 	The method moves checks that the rover does not move out of bounds.
+ * 
+ * 
+ */
+
 
 public class Rover{
 	
-	//TODO: Need to be able to import the input as a text file
+
 	
 	private static Position position;
 	private static Plateau plateau;
@@ -36,7 +46,11 @@ public class Rover{
 	
 	
 	
-	// Idea: create method out of bounds and try to include it in this:
+	/*
+	 *  Call this method to make the rover move. 
+	 *  An initial position and plateau are needed for the rover to move.
+	 */
+		
 	
 	public void move() {
 		

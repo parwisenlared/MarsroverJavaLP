@@ -1,4 +1,12 @@
 
+/**
+ * 
+ * The Interface PositionIF holds an enumeration with the possible Directions 
+ * 			and turnings given the initial Direction.
+ *
+ */
+
+
 public interface PositionIF {
 
 		  

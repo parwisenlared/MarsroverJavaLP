@@ -1,11 +1,12 @@
 
 
 /*
- *  This class contains methods to define the GRID the rover will be running on.
- *  When loading the input (ideally via an the imput text - not done yet)
- *  	the first line defines the x,y limits of the plateau
+ *  This class contains methods to define the Plateau (grid) the Rover will be running on.
  *  
- *  contructor
+ *  In this implementation, the plateau coordinates must be bigger than 0,0 
+ *  	so that the Rover can move at least 1 coordinate in x and y.
+ *  
+ * 
  */
 
 public class Plateau {
@@ -13,7 +14,10 @@ public class Plateau {
 	private int width;
 	private int height;
 	
+	
 	public Plateau (int topRight, int bottomRight) {
+		if (topRight <= 0) throw new IllegalArgumentException("Value of number coordinate X must be bigger than 0");
+		if (bottomRight <= 0) throw new IllegalArgumentException("Value of number coordinate Y must be bigger than 0");
 		this.width = topRight;
 		this.height = bottomRight;
 	}
@@ -39,7 +43,4 @@ public class Plateau {
 	}
 	
 	
-	// IDEA for JUnit Test: no negative numbers allowed.
-	
-	// Idea: put a memthod boolean outofbounds... to check if rover is trying to go out of the plateau
 }
