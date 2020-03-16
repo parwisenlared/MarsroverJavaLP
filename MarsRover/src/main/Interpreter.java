@@ -144,6 +144,9 @@ public class Interpreter {
 			}
 		}
 		
+	public Plateau getPlateau() {
+		return plateau;
+	}
 
 	public Interpreter () {
 		

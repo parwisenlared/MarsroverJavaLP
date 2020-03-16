@@ -1,4 +1,7 @@
-package main; 
+package main;
+
+import main.PositionIF.Direction;
+
 /**
  * 
  * 	This class holds the information about the Rover and methods to move and change position once the instructions
@@ -41,8 +44,8 @@ public class Rover{
 		return Rover.plateau;
 	}
 	
-	public Position getDirection() {
-		return position;
+	public Direction getDirection() {
+		return position.getDirection();
 	}
 	
 	

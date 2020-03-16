@@ -37,7 +37,7 @@ public class RoverTest {
 	 @Test
 	 public void createRover() throws Exception {
 		 assertEquals(rover.getPosition(), position);
-	     assertEquals(rover.getDirection(), direction);
+		 assertEquals(rover.getDirection(), direction);
 	     assertTrue(rover.getPosition().getX() != y);
 	     assertTrue(rover.getPosition().getY() != x);
 	     assertTrue(rover.getPlateau().getX() != height);
@@ -46,6 +46,19 @@ public class RoverTest {
 	     assertTrue(rover.getPosition().getY() != width);
 	     assertTrue(rover.getPosition().getX() != height);
 	     assertTrue(rover.getPosition().getX() != width);
+	 }
+	 
+	 @Test
+	public void roverDies() {
+		 rover.move();
+		 rover.move();
+		 rover.move();
+		 rover.move();
+		 rover.move();
+		 rover.getPosition().;
+		 Position position = new Position(1,4,direction);
+		 assertEquals(rover.getPosition(), position);
+		 
 	 }
 
 
